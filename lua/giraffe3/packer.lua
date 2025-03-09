@@ -22,15 +22,14 @@ return require('packer').startup(function(use)
   use ('jose-elias-alvarez/null-ls.nvim')
   use ('folke/which-key.nvim')
   use {
-  	'NeogitOrg/neogit',
-  	 dependencies = {
-    		"nvim-lua/plenary.nvim",
-    		"sindrets/diffview.nvim",
-  	},
+  "folke/noice.nvim",
+  requires = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    }
    }
    use ('tpope/vim-fugitive')
-  
-    use {
+   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
