@@ -1,6 +1,6 @@
 -- Reserve a space in the gutter
 vim.opt.signcolumn = 'yes'
-
+local lspconfig = require("lspconfig")
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
 local lspconfig_defaults = require('lspconfig').util.default_config
@@ -61,3 +61,12 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({select = false}),
   }),
 })
+
+
+lspconfig.omnisharp.setup({
+	cmd = { "omnisharp" },
+	enable_roslyn_analyzers = true,
+	enable_import_completlion = true,
+	organize_imports_on_format = true,
+})
+
