@@ -1,8 +1,5 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-local c = require('solarized-osaka.colors')
-
-require("nvim-tree").setup({
+local tree = require("nvim-tree")
+tree.setup({
 git = {
 enable = false,
 },
