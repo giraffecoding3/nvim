@@ -11,7 +11,7 @@ renderer = {
 		glyphs = {
 			folder = {
 				default = " ",
-				open = "󱧨 ",
+				open = " ",
 				arrow_open = "",
 				arrow_closed = "",
 			}
