@@ -3,7 +3,16 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
+	use({
+		"barrett-ruth/live-server.nvim",
+		build = "pnpm add -g live-server",
+		cmd = { "LiveServerStart", "LiveServerStop" },
+		config = function()
+			require("live-server").setup()
+		end,
+	})
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",

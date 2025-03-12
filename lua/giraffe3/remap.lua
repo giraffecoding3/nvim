@@ -7,4 +7,5 @@ vim.keymap.set("n", "<tab>", "<Cmd>tabnext<CR>")
 vim.keymap.set("n", "<s-tab>", "<Cmd>tabprev<CR>")
 --Window managment
 vim.keymap.set("n", "<leader>w", "<C-w>w")
-
+vim.keymap.set("n", "<leader>ls", ":LiveServerStart<CR>")
+vim.keymap.set("n", "<leader>lS", ":LiveServerStop<CR>")
