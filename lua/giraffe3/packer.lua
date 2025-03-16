@@ -4,7 +4,7 @@ return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
-
+	use("m4xshen/autoclose.nvim")
 	use({
 		"barrett-ruth/live-server.nvim",
 		build = "pnpm add -g live-server",

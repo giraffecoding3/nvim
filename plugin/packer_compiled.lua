@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\NeoSolarized.nvim",
     url = "https://github.com/Tsuzat/NeoSolarized.nvim"
   },
+  ["autoclose.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\autoclose.nvim",
+    url = "https://github.com/m4xshen/autoclose.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
