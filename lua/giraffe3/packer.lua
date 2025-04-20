@@ -5,6 +5,8 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 	use("m4xshen/autoclose.nvim")
+	use("folke/tokyonight.nvim")
+	use("lervag/vimtex")
 	use({
 		"barrett-ruth/live-server.nvim",
 		build = "pnpm add -g live-server",
@@ -29,6 +31,8 @@ return require("packer").startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 	use("craftzdog/solarized-osaka.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
+
+	use("numToStr/Comment.nvim")
 	use("folke/which-key.nvim")
 	use({
 		"folke/noice.nvim",
