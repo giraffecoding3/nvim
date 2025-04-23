@@ -7,7 +7,7 @@ else
 	-- Windows-spezifische Keybindings
 	vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 end
-
+vim.g.maplocalleader = ","
 vim.api.nvim_create_autocmd("BufReadPre", {
 	pattern = "*.pdf",
 	callback = function()
@@ -19,11 +19,14 @@ vim.api.nvim_create_autocmd("BufReadPre", {
 			"cmd",
 			"/c",
 			"start",
+			"/max",
 			"",
-			"C:\\Users\\alexa\\AppData\\Local\\SumatraPDF\\SumatraPDF.exe",
+			"chrome",
 			pdf_path,
 		}, { detach = true })
 
 		vim.cmd("bd!") -- Buffer schließen, damit kein "scuffed code" angezeigt wird
 	end,
 })
+
+vim.cmd("colorscheme tokyonight")

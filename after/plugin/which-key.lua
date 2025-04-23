@@ -1,6 +1,5 @@
-require("which-key").setup {
-	win = {
-		height = 5,
-	}
-}
-
+-- require("which-key").setup {
+-- 	win = {
+-- 		height = 5,
+-- 	}
+-- }

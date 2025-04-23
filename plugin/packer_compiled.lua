@@ -123,6 +123,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["neo-tree.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
   ["noice.nvim"] = {
     loaded = true,
     path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\noice.nvim",
@@ -152,16 +157,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
-  },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
-    url = "https://github.com/nvim-tree/nvim-tree.lua"
-  },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -198,10 +193,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  vimtex = {
+  vlime = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vimtex",
-    url = "https://github.com/lervag/vimtex"
+    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vlime\\vim/",
+    url = "https://github.com/vlime/vlime"
   },
   ["which-key.nvim"] = {
     loaded = true,
@@ -211,22 +206,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Runtimepath customization
+time([[Runtimepath customization]], true)
+vim.o.runtimepath = vim.o.runtimepath .. ",C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vlime\\vim/"
+time([[Runtimepath customization]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'LiveServerStart', function(cmdargs)
-          require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStart', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('LiveServerStart ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'LiveServerStop', function(cmdargs)
           require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStop', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('LiveServerStop ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'LiveServerStart', function(cmdargs)
+          require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStart', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LiveServerStart ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 

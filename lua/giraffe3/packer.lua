@@ -6,7 +6,20 @@ return require("packer").startup(function(use)
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 	use("m4xshen/autoclose.nvim")
 	use("folke/tokyonight.nvim")
-	use("lervag/vimtex")
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		},
+	})
+	use({
+		"vlime/vlime",
+		rtp = "vim/", -- Das Verzeichnis, das vim-spezifische Dateien enthält
+	})
 	use({
 		"barrett-ruth/live-server.nvim",
 		build = "pnpm add -g live-server",
@@ -26,12 +39,8 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-	use("nvim-tree/nvim-tree.lua")
-	use("nvim-tree/nvim-web-devicons")
 	use("craftzdog/solarized-osaka.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
-
 	use("numToStr/Comment.nvim")
 	use("folke/which-key.nvim")
 	use({

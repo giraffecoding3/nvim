@@ -11,3 +11,5 @@ vim.keymap.set("n", "<leader>w", "<C-w>w")
 vim.keymap.set("n", "<leader>ls", ":LiveServerStart<CR>")
 vim.keymap.set("n", "<leader>lS", ":LiveServerStop<CR>")
 vim.keymap.set("n", "<leader>s", ":so<CR>")
+--Insert Paste
+vim.keymap.set("i", "<a-P>", "<ESC>:put<CR>i")
