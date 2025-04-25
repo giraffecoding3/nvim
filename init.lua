@@ -8,7 +8,7 @@ else
 	vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 end
 vim.g.maplocalleader = ","
-vim.api.nvim_create_autocmd("BufReadPre", {
+vim.api.nvim_create_autocmd("BufReadPost", {
 	pattern = "*.pdf",
 	callback = function()
 		local pdf_path = vim.fn.expand("%:p")
