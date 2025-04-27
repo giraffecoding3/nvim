@@ -12,7 +12,7 @@ end
 vim.g.maplocalleader = ","
 
 -- Autocommand für das Öffnen von PDFs
-vim.api.nvim_create_autocmd("BufReadPre", {
+vim.api.nvim_create_autocmd("BufReadPost", {
 	pattern = "*.pdf",
 	callback = function()
 		local pdf_path = vim.fn.expand("%:p")
