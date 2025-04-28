@@ -5,7 +5,7 @@ local lspconfig = require("lspconfig")
 -- This should be executed before you configure any language server
 local lspconfig_defaults = require("lspconfig").util.default_config
 lspconfig_defaults.capabilities =
-	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
+    vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
 -- This is where you enable features that only work
 -- if there is a language server active in the file
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -65,3 +65,8 @@ lspconfig.omnisharp.setup({
 	enable_import_completlion = true,
 	organize_imports_on_format = true,
 })
+lspconfig.clangd.setup {
+	cmd = { "clangd", "--background-index" },
+	filetypes = { "c", "cpp", "objc", "objcpp" },
+	root_dir = require('lspconfig').util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+}
