@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["live-server.nvim"] = {
     commands = { "LiveServerStart", "LiveServerStop" },
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16live-server\frequire\0" },
