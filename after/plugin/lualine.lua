@@ -1,18 +1,8 @@
--- require("lualine").setup({
--- 	options = {
--- 		theme = "solarized_dark", -- Oder ein anderes Theme wie 'gruvbox'
--- 		section_separators = { "", "" },
--- 		component_separators = { "", "" },
--- 	},
--- 	sections = {
--- 		lualine_b = { "branch", "diff", "diagnostics" },
--- 	},
--- })
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "  " },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
@@ -47,5 +37,5 @@ require("lualine").setup({
 	tabline = {},
 	winbar = {},
 	inactive_winbar = {},
-	extensions = { "nvim-tree" },
+	extensions = { "neo-tree" },
 })
