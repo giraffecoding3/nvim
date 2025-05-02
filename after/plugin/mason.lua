@@ -5,7 +5,6 @@ require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = { "html", "lua_ls", "rust_analyzer", "pyright", "omnisharp" },
 })
-
 -- Funktion für LSP-Setup mit Standard-Capabilities
 local function setup_lsp(server)
 	lspconfig[server].setup({
@@ -14,7 +13,7 @@ local function setup_lsp(server)
 end
 
 -- Server Setup mit Standard-Settings
-local servers = { "html", "lua_ls", "rust_analyzer", "pyright", "omnisharp", "stylua" }
+local servers = { "html", "lua_ls", "rust_analyzer", "pyright", "omnisharp" }
 for _, server in ipairs(servers) do
 	setup_lsp(server)
 end

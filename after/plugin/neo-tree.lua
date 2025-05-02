@@ -47,4 +47,4 @@ require("neo-tree").setup({
 vim.keymap.set("n", "<leader>pv", "<Cmd>Neotree toggle<CR>")
 
 -- Tree beim Start automatisch öffnen
-vim.cmd([[autocmd VimEnter * Neotree show]])
+--vim.cmd([[autocmd VimEnter * Neotree show]])
