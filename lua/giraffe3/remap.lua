@@ -13,3 +13,5 @@ vim.keymap.set("n", "<leader>lS", ":LiveServerStop<CR>")
 vim.keymap.set("n", "<leader>s", ":so<CR>")
 --Insert Paste
 vim.keymap.set("i", "<a-P>", "<ESC>:put<CR>i")
+--Dashboard Hotkey--
+vim.keymap.set("n", "<leader>pd", ":Dashboard<CR>")
