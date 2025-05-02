@@ -3,6 +3,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	callback = function()
 		if vim.bo.filetype ~= "dashboard" then
 			vim.opt.laststatus = 2
+			vim.opt.showtabline = 2
 		end
 	end,
 })
@@ -14,8 +15,20 @@ vim.api.nvim_create_autocmd("BufLeave", {
 				vim.opt.laststatus = 2
 				local ok, lualine = pcall(require, "lualine")
 				if ok then
-					lualine.setup(require("lualine").setup()) -- falls du eine separate Datei hast
-					-- oder schreibe hier direkt deine Lualine-Setup-Tabelle rein
+					dofile(vim.fn.stdpath("config") .. "/after/plugin/lualine.lua")
+				end
+			end)
+		end
+	end,
+})
+
+vim.api.nvim_create_autocmd("BufLeave", {
+	callback = function()
+		if vim.bo.filetype == "dashboard" then
+			vim.schedule(function()
+				local ok, _ = pcall(require, "bufferline")
+				if ok then
+					dofile(vim.fn.stdpath("config") .. "/after/plugin/bufferline.lua")
 				end
 			end)
 		end
