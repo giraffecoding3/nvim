@@ -98,10 +98,10 @@ return require("packer").startup(function(use)
 							action = "enew",
 						},
 						{
-							desc = " Find Word",
+							desc = "Config",
 							group = "Label",
-							key = "w",
-							action = "Telescope live_grep",
+							key = "c",
+							action = "cd ~/Appdata/Local/nvim",
 						},
 					},
 					packages = { enable = true },

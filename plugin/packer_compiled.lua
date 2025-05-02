@@ -101,7 +101,7 @@ _G.packer_plugins = {
   },
   ["dashboard-nvim"] = {
     commands = { "Dashboard" },
-    config = { "\27LJ\2\n�\5\0\0\6\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\t\0004\4\6\0005\5\4\0>\5\1\0045\5\5\0>\5\2\0045\5\6\0>\5\3\0045\5\a\0>\5\4\0045\5\b\0>\5\5\4=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\vconfig\bmru\1\0\5\nlabel\17Recent Files\ticon\5\nlimit\3\n\rcwd_only\1\venable\2\fproject\1\0\5\vaction\30Telescope find_files cwd=\nlabel\rProjects\ticon\5\nlimit\3\b\venable\2\rpackages\1\0\1\venable\2\rshortcut\1\0\4\fproject\0\bmru\0\rpackages\0\rshortcut\0\1\0\4\tdesc\18 Find Word\ngroup\nLabel\vaction\24Telescope live_grep\bkey\6w\1\0\4\tdesc\17 New File\ngroup\14@property\vaction\tenew\bkey\6n\1\0\4\tdesc\16 Recents\ngroup\14@property\vaction\23Telescope oldfiles\bkey\6r\1\0\4\tdesc\18 Find File\ngroup\14@property\vaction\25Telescope find_files\bkey\6f\1\0\4\tdesc\rExplorer\ngroup\14@property\vaction\17Neotree show\bkey\6v\1\0\2\vconfig\0\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\5\0\0\6\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\t\0004\4\6\0005\5\4\0>\5\1\0045\5\5\0>\5\2\0045\5\6\0>\5\3\0045\5\a\0>\5\4\0045\5\b\0>\5\5\4=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\vconfig\bmru\1\0\5\nlabel\17Recent Files\ticon\5\nlimit\3\n\rcwd_only\1\venable\2\fproject\1\0\5\nlabel\rProjects\ticon\5\nlimit\3\b\vaction\30Telescope find_files cwd=\venable\2\rpackages\1\0\1\venable\2\rshortcut\1\0\4\rshortcut\0\rpackages\0\bmru\0\fproject\0\1\0\4\ngroup\nLabel\bkey\6c\tdesc\vConfig\vaction\28cd ~/Appdata/Local/nvim\1\0\4\ngroup\14@property\bkey\6n\tdesc\17 New File\vaction\tenew\1\0\4\ngroup\14@property\bkey\6r\tdesc\16 Recents\vaction\23Telescope oldfiles\1\0\4\ngroup\14@property\bkey\6f\tdesc\18 Find File\vaction\25Telescope find_files\1\0\4\ngroup\14@property\bkey\6v\tdesc\rExplorer\vaction\17Neotree show\1\0\2\ntheme\nhyper\vconfig\0\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -232,13 +232,6 @@ time([[Runtimepath customization]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'Dashboard', function(cmdargs)
-          require('packer.load')({'dashboard-nvim'}, { cmd = 'Dashboard', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Dashboard ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'LiveServerStart', function(cmdargs)
           require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStart', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
@@ -252,6 +245,13 @@ pcall(vim.api.nvim_create_user_command, 'LiveServerStop', function(cmdargs)
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('LiveServerStop ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Dashboard', function(cmdargs)
+          require('packer.load')({'dashboard-nvim'}, { cmd = 'Dashboard', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Dashboard ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 
