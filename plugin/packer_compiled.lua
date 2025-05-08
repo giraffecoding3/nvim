@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\alexa\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\share\\lua\\5.1\\?.lua;C:\\Users\\alexa\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\alexa\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\alexa\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\alexa\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\lua\\5.1\\?.so"
+local package_path_str = "/home/linuxarc/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/home/linuxarc/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/home/linuxarc/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/home/linuxarc/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/linuxarc/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,41 +76,41 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
   ["NeoSolarized.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\NeoSolarized.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/NeoSolarized.nvim",
     url = "https://github.com/Tsuzat/NeoSolarized.nvim"
   },
   ["autoclose.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\autoclose.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
   },
   ["bufferline.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["dashboard-nvim"] = {
     commands = { "Dashboard" },
-    config = { "\27LJ\2\n�\5\0\0\6\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\t\0004\4\6\0005\5\4\0>\5\1\0045\5\5\0>\5\2\0045\5\6\0>\5\3\0045\5\a\0>\5\4\0045\5\b\0>\5\5\4=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\vconfig\bmru\1\0\5\nlabel\17Recent Files\ticon\5\nlimit\3\n\rcwd_only\1\venable\2\fproject\1\0\5\nlabel\rProjects\ticon\5\nlimit\3\b\vaction\30Telescope find_files cwd=\venable\2\rpackages\1\0\1\venable\2\rshortcut\1\0\4\rshortcut\0\rpackages\0\bmru\0\fproject\0\1\0\4\ngroup\nLabel\bkey\6c\tdesc\vConfig\vaction\28cd ~/Appdata/Local/nvim\1\0\4\ngroup\14@property\bkey\6n\tdesc\17 New File\vaction\tenew\1\0\4\ngroup\14@property\bkey\6r\tdesc\16 Recents\vaction\23Telescope oldfiles\1\0\4\ngroup\14@property\bkey\6f\tdesc\18 Find File\vaction\25Telescope find_files\1\0\4\ngroup\14@property\bkey\6v\tdesc\rExplorer\vaction\17Neotree show\1\0\2\ntheme\nhyper\vconfig\0\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\5\0\0\6\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\t\0004\4\6\0005\5\4\0>\5\1\0045\5\5\0>\5\2\0045\5\6\0>\5\3\0045\5\a\0>\5\4\0045\5\b\0>\5\5\4=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\vconfig\bmru\1\0\5\ticon\5\rcwd_only\1\venable\2\nlimit\3\n\nlabel\17Recent Files\fproject\1\0\5\ticon\5\vaction\30Telescope find_files cwd=\venable\2\nlimit\3\b\nlabel\rProjects\rpackages\1\0\1\venable\2\rshortcut\1\0\4\bmru\0\fproject\0\rpackages\0\rshortcut\0\1\0\4\ngroup\nLabel\tdesc\vConfig\bkey\6c\vaction\28cd ~/Appdata/Local/nvim\1\0\4\ngroup\14@property\tdesc\17 New File\bkey\6n\vaction\tenew\1\0\4\ngroup\14@property\tdesc\16 Recents\bkey\6r\vaction\23Telescope oldfiles\1\0\4\ngroup\14@property\tdesc\18 Find File\bkey\6f\vaction\25Telescope find_files\1\0\4\ngroup\14@property\tdesc\rExplorer\bkey\6v\vaction\17Neotree show\1\0\2\vconfig\0\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\dashboard-nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/nvimdev/dashboard-nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["live-server.nvim"] = {
@@ -119,107 +119,107 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\live-server.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/opt/live-server.nvim",
     url = "https://github.com/barrett-ruth/live-server.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["neo-tree.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
   ["noice.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\noice.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/noice.nvim",
     url = "https://github.com/folke/noice.nvim"
+  },
+  ["none-ls.nvim"] = {
+    loaded = true,
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-notify"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["solarized-osaka.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\solarized-osaka.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/solarized-osaka.nvim",
     url = "https://github.com/craftzdog/solarized-osaka.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
   vlime = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vlime\\vim/",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/vlime/vim/",
     url = "https://github.com/vlime/vlime"
   },
   ["which-key.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\which-key.nvim",
+    path = "/home/linuxarc/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
   }
 }
@@ -227,11 +227,18 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Runtimepath customization
 time([[Runtimepath customization]], true)
-vim.o.runtimepath = vim.o.runtimepath .. ",C:\\Users\\alexa\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vlime\\vim/"
+vim.o.runtimepath = vim.o.runtimepath .. ",/home/linuxarc/.local/share/nvim/site/pack/packer/start/vlime/vim/"
 time([[Runtimepath customization]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'Dashboard', function(cmdargs)
+          require('packer.load')({'dashboard-nvim'}, { cmd = 'Dashboard', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Dashboard ', 'cmdline')
+      end})
 pcall(vim.api.nvim_create_user_command, 'LiveServerStart', function(cmdargs)
           require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStart', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
@@ -245,13 +252,6 @@ pcall(vim.api.nvim_create_user_command, 'LiveServerStop', function(cmdargs)
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('LiveServerStop ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'Dashboard', function(cmdargs)
-          require('packer.load')({'dashboard-nvim'}, { cmd = 'Dashboard', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'dashboard-nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Dashboard ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 

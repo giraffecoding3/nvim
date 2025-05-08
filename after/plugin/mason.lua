@@ -13,7 +13,7 @@ local function setup_lsp(server)
 end
 
 -- Server Setup mit Standard-Settings
-local servers = { "html", "lua_ls", "rust_analyzer", "pyright", "omnisharp" }
+local servers = { "html", "lua_ls", "rust_analyzer", "pyright", "omnisharp"}
 for _, server in ipairs(servers) do
 	setup_lsp(server)
 end

@@ -44,7 +44,7 @@ return require("packer").startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
 	use("craftzdog/solarized-osaka.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimtools/none-ls.nvim")
 	use("numToStr/Comment.nvim")
 	use("folke/which-key.nvim")
 	use({
