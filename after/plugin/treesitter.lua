@@ -1,6 +1,5 @@
 require("nvim-treesitter.configs").setup({
 	-- A list of parser names, or "all" (the listed parsers MUST always be installed)
-
 	ensure_installed = {
 		"python",
 		"javascript",
@@ -33,5 +32,15 @@ require("nvim-treesitter.configs").setup({
 		-- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = false,
 	},
+	-- Füge diese 'fold' Sektion hinzu oder erweitere sie
+	fold = {
+		enable = true, -- Aktiviere das Einklappen mit Treesitter
+		sign = "▎", -- Optional: Setze ein Faltzeichen
+		-- Weitere Optionen können hier gesetzt werden (siehe :help nvim-treesitter-folding)
+	},
 })
--- Setze die Vim-Optionen für das Einklapp
+
+-- Setze die Vim-Optionen für das Einklappen
+vim.opt.foldmethod = "expr" -- Verwende einen Ausdruck zur Berechnung der Faltbereiche
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- Verwende Treesitter für den Ausdruck
+vim.opt.foldenable = true -- Aktiviere das Einklappen
