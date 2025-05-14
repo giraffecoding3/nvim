@@ -44,3 +44,4 @@ require("nvim-treesitter.configs").setup({
 vim.opt.foldmethod = "expr" -- Verwende einen Ausdruck zur Berechnung der Faltbereiche
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- Verwende Treesitter für den Ausdruck
 vim.opt.foldenable = true -- Aktiviere das Einklappen
+vim.opt.foldlevelstart = 99 -- Starte mit allen Faltungen geöffnet (ein hoher Wert öffnet alle)
