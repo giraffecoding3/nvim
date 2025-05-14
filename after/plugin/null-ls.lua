@@ -7,11 +7,12 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.prettier,
 		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.clang_format,
 	},
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = { "*.lua", "*.py", "*.html" },
+	pattern = { "*.lua", "*.py", "*.html", "*.cpp", "*.c", "*.h" },
 	callback = function()
 		vim.lsp.buf.format({ async = false })
 	end,
