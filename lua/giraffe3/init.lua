@@ -21,7 +21,7 @@ if vim.fn.has("macunix") == 1 then
 			vim.fn.jobstart({
 				"open",
 				"-a",
-				"Google Chrome",
+				"Safari",
 
 				pdf_path,
 			}, { detach = true })
